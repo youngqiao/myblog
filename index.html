@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>欢迎来到杨巧的美食屋</title>
+
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<script src="js/jquery.js"></script>	
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		window.onhashchange=function(){
+			if(location.hash=='#aboutUs')
+			{	
+				$("#change").load('load.html');
+			}
+		}
+	})
+	</script>
+</head>
+<body>
+		<!-- 巨幕 -->
+<div id="change">
+		<div class="jumbotron" >
+		<div class="container  slideInRight animated">
+				<!-- 导航 -->
+				<nav>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#"style="background:transparent;border:0;" >首页 <span class="sr-only">(current)</span></a></li>
+						<li><a href="#" style="background:transparent;border:0;">美食日记</a></li>
+						<li><a href="#" style="background:transparent;border:0;">美食DIY</a></li>
+						<li><a href="#" style="background:transparent;border:0;">川渝美食</a></li>
+						<li><a href="#" style="background:transparent;border:0;">留言区</a></li>
+					</ul> 
+				</nav>
+
+
+
+			<div  id="words" style="background:transparent;">
+		  <h1 id="headline1">欢迎来到杨巧的美食屋</h1>
+		  <h1 id="headline2">记录&nbsp;·&nbsp;交流&nbsp;·&nbsp;分享</h1>
+		  <div class="whiteLine">
+		  </div>
+		  <p>
+		  	BE HUNGRY BE HAPPY
+		  </p>
+		  <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">
+		  	<span class="top"></span>
+		  	<span class="left"></span>
+		  	<span class="bottom"></span>
+		  	<span class="right"></span>
+		  	了解更多</a></p> -->
+		</div>
+		</div>
+	</div>
+	<!-- 新闻 -->
+		<div class="news">
+
+		</div>
+	<!-- 功能缩略图 -->
+	<div class="panel" style="background:transparent;">
+<!-- 		<div class="panel-heading">
+		    <h3 class="panel-title">产品与解决方案</h3>
+		</div> -->
+		<div class="panel-body">
+		<div class="row">
+			<!-- 图一 -->
+		  <div class="col-sm-6 col-md-3 fadeIn animated" style="background:transparent;">
+		    <div class="thumbnail" style="background:transparent;">
+		      <img src="img/food1.jpg" alt="...">
+		      <div class="caption">
+		        <h3>黄山毛豆腐</h3>
+		        <p>鲜醇爽口，芳香诱人，开胃良品</p>
+		      </div>
+		    </div>
+		  </div>
+		  <!-- 图二 -->
+		  <div class="col-sm-6 col-md-3 fadeIn animated" style="background:transparent;">
+		    <div class="thumbnail" style="background:transparent;">
+		      <img src="img/food2.jpg" alt="...">
+		      <div class="caption">
+		        <h3>重庆米线</h3>
+		        <p>麻辣诱人，爽口滑嫩，易于消化</p>
+<!-- 		        <p>
+		        	<a href="#" class="learnmore" role="button">了解更多</a>
+		        </p> -->
+		      </div>
+		    </div>
+		  </div>
+		  <!-- 图三 -->
+		  <div class="col-sm-6 col-md-3 fadeIn animated" style="background:transparent;">
+		    <div class="thumbnail" style="background:transparent;">
+		      <img src="img/food3.jpg" alt="...">
+		      <div class="caption">
+		        <h3>重庆火锅</h3>
+		        <p>咕嘟咕嘟，现吃现烫，酣畅之极</p>
+<!-- 		        <p>
+		        	<a href="#" class="learnmore" role="button">了解更多</a>
+		        </p> -->
+		      </div>
+		    </div>
+		  </div>
+		  <!-- 图四 -->
+		  <div class="col-sm-6 col-md-3 fadeIn animated" style="background:transparent;">
+		    <div class="thumbnail" style="background:transparent;">
+		      <img src="img/food4.jpg" alt="...">
+		      <div class="caption">
+		        <h3>麻辣小龙虾</h3>
+		        <p>滋味辣鲜，色泽红亮，香辣可口</p>
+<!-- 		        <p>
+		        	<a href="#" class="learnmore" role="button">了解更多</a>
+		        </p> -->
+		      </div>
+		    </div>
+		  </div>
+		  </div>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<div class="foot">
+		<footer>
+		    <small>
+		      Copyright &copy2017 &nbsp;&nbsp;&nbsp;&nbsp;个人所有 &nbsp;&nbsp;&nbsp;&nbsp;联系邮箱：1414865116@qq.com
+		    </small>
+	 	</footer>
+	</div>
+</div>
+</body>
+<!-- 定时动画 -->
+<script>
+var flag = 1;
+var int=self.setInterval("clock()",3000);
+function clock()
+{
+	if(flag)
+	{
+		$('#headline1').removeClass('bounceInRight animated');
+		$('#headline1').addClass('bounceOutLeft animated');
+		$('#headline1').css('display','none');
+		
+		$('#headline2').removeClass('bounceOutLeft animated');
+		$('#headline2').addClass('bounceInRight animated');
+		$('#headline2').css('display','block');
+		
+		flag = 0;
+	}
+	else
+	{
+		$('#headline1').removeClass('bounceOutLeft animated');
+		$('#headline1').addClass('bounceInRight animated');
+		$('#headline1').css('display','block');
+
+		$('#headline2').removeClass('bounceInRight animated');
+		$('#headline2').addClass('bounceOutLeft animated');
+		$('#headline2').css('display','none');
+
+		flag = 1;
+	}
+	
+}
+
+
+	
+
+</script>
+</html>
